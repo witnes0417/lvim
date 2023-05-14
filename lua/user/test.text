@@ -1,0 +1,101 @@
+   980	May 12 21:26:43 archlinux kernel: [drm] reserve 0xa00000 from 0xf4fe000000 for PSP TMR
+   981	May 12 21:26:43 archlinux kernel: hid-generic 0003:046D:C52B.0002: input,hidraw1: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-0000:75:00.3-3/input0
+   982	May 12 21:26:43 archlinux kernel: input: Logitech USB Receiver Mouse as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.1/0003:046D:C52B.0003/input/input6
+   983	May 12 21:26:43 archlinux kernel: input: Logitech USB Receiver Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.1/0003:046D:C52B.0003/input/input7
+   984	May 12 21:26:43 archlinux kernel: input: Logitech USB Receiver System Control as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.1/0003:046D:C52B.0003/input/input8
+   985	May 12 21:26:43 archlinux kernel: hid-generic 0003:046D:C52B.0003: input,hiddev96,hidraw2: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:75:00.3-3/input1
+   986	May 12 21:26:43 archlinux kernel: hid-generic 0003:046D:C52B.0004: hiddev97,hidraw3: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:75:00.3-3/input2
+   987	May 12 21:26:43 archlinux kernel: usbcore: registered new interface driver usbhid
+   988	May 12 21:26:43 archlinux kernel: usbhid: USB HID core driver
+   989	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: RAS: optional ras ta ucode is not available
+   990	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: RAP: optional rap ta ucode is not available
+   991	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: SECUREDISPLAY: securedisplay ta ucode is not available
+   992	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: SMU is initialized successfully!
+   993	May 12 21:26:43 archlinux kernel: [drm] Display Core initialized with v3.2.215!
+   994	May 12 21:26:43 archlinux kernel: [drm] DMUB hardware initialized: version=0x0400002E
+   995	May 12 21:26:43 archlinux kernel: [drm] DP Alt mode state on HPD: 1
+   996	May 12 21:26:43 archlinux kernel: [drm] kiq ring mec 2 pipe 1 q 0
+   997	May 12 21:26:43 archlinux kernel: [drm] VCN decode and encode initialized successfully(under DPG Mode).
+   998	May 12 21:26:43 archlinux kernel: [drm] JPEG decode initialized successfully.
+   999	May 12 21:26:43 archlinux kernel: kfd kfd: amdgpu: Allocated 3969056 bytes on gart
+  1000	May 12 21:26:43 archlinux kernel: amdgpu: sdma_bitmap: 3
+  1001	May 12 21:26:43 archlinux kernel: memmap_init_zone_device initialised 1048576 pages in 4ms
+  1002	May 12 21:26:43 archlinux kernel: amdgpu: HMM registered 4096MB device memory
+  1003	May 12 21:26:43 archlinux kernel: amdgpu: SRAT table not found
+  1004	May 12 21:26:43 archlinux kernel: amdgpu: Virtual CRAT table created for GPU
+  1005	May 12 21:26:43 archlinux kernel: amdgpu: Topology: Add dGPU node [0x1681:0x1002]
+  1006	May 12 21:26:43 archlinux kernel: kfd kfd: amdgpu: added device 1002:1681
+  1007	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: SE 1, SH per SE 2, CU per SH 6, active_cu_number 12
+  1008	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+  1009	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+  1010	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+  1011	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 5 on hub 0
+  1012	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 6 on hub 0
+  1013	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+  1014	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+  1015	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 9 on hub 0
+  1016	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 10 on hub 0
+  1017	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring kiq_2.1.0 uses VM inv eng 11 on hub 0
+  1018	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+  1019	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring vcn_dec_0 uses VM inv eng 0 on hub 1
+  1020	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring vcn_enc_0.0 uses VM inv eng 1 on hub 1
+  1021	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring vcn_enc_0.1 uses VM inv eng 4 on hub 1
+  1022	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: amdgpu: ring jpeg_dec uses VM inv eng 5 on hub 1
+  1023	May 12 21:26:43 archlinux kernel: [drm] Initialized amdgpu 3.49.0 20150101 for 0000:75:00.0 on minor 0
+  1024	May 12 21:26:43 archlinux kernel: fbcon: amdgpudrmfb (fb0) is primary device
+  1025	May 12 21:26:43 archlinux kernel: [drm] DSC precompute is not needed.
+  1026	May 12 21:26:43 archlinux kernel: Console: switching to colour frame buffer device 240x67
+  1027	May 12 21:26:43 archlinux kernel: amdgpu 0000:75:00.0: [drm] fb0: amdgpudrmfb frame buffer device
+  1028	May 12 21:26:43 archlinux kernel:  sda: sda1 sda2 sda3 sda4
+  1029	May 12 21:26:43 archlinux kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+  1030	May 12 21:26:43 archlinux kernel: device-mapper: uevent: version 1.0.3
+  1031	May 12 21:26:43 archlinux kernel: device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+  1032	May 12 21:26:43 archlinux kernel: logitech-djreceiver 0003:046D:C52B.0004: hiddev96,hidraw1: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:75:00.3-3/input2
+  1033	May 12 21:26:43 archlinux kernel: input: Logitech Wireless Device PID:4069 Keyboard as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.2/0003:046D:C52B.0004/0003:046D:4069.0005/input/input10
+  1034	May 12 21:26:43 archlinux kernel: input: Logitech Wireless Device PID:4069 Mouse as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.2/0003:046D:C52B.0004/0003:046D:4069.0005/input/input11
+  1035	May 12 21:26:43 archlinux kernel: hid-generic 0003:046D:4069.0005: input,hidraw2: USB HID v1.11 Keyboard [Logitech Wireless Device PID:4069] on usb-0000:75:00.3-3/input2:1
+  1036	May 12 21:26:43 archlinux kernel: input: Logitech Wireless Device PID:4089 Keyboard as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.2/0003:046D:C52B.0004/0003:046D:4089.0006/input/input15
+  1037	May 12 21:26:43 archlinux kernel: hid-generic 0003:046D:4089.0006: input,hidraw3: USB HID v1.11 Keyboard [Logitech Wireless Device PID:4089] on usb-0000:75:00.3-3/input2:2
+  1038	May 12 21:26:43 archlinux kernel: PM: Image not found (code -22)
+  1039	May 12 21:26:43 archlinux kernel: EXT4-fs (dm-1): mounted filesystem e41f5433-eeb8-4228-b8c6-fed57c0764c9 with ordered data mode. Quota mode: none.
+  1040	May 12 21:26:43 archlinux systemd[1]: systemd 253.3-3-arch running in system mode (+PAM +AUDIT -SELINUX -APPARMOR -IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +XKBCOMMON +UTMP -SYSVINIT default-hierarchy=unified)
+  1041	May 12 21:26:43 archlinux systemd[1]: Detected architecture x86-64.
+  1042	May 12 21:26:43 archlinux kernel: input: Logitech MX Master 2S as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.2/0003:046D:C52B.0004/0003:046D:4069.0005/input/input19
+  1043	May 12 21:26:43 archlinux kernel: logitech-hidpp-device 0003:046D:4069.0005: input,hidraw2: USB HID v1.11 Keyboard [Logitech MX Master 2S] on usb-0000:75:00.3-3/input2:1
+  1044	May 12 21:26:43 archlinux kernel: input: Logitech K580 as /devices/pci0000:00/0000:00:08.1/0000:75:00.3/usb1/1-3/1-3:1.2/0003:046D:C52B.0004/0003:046D:4089.0006/input/input20
+  1045	May 12 21:26:43 archlinux kernel: logitech-hidpp-device 0003:046D:4089.0006: input,hidraw3: USB HID v1.11 Keyboard [Logitech K580] on usb-0000:75:00.3-3/input2:2
+  1046	May 12 21:26:43 archlinux systemd[1]: bpf-lsm: LSM BPF program attached
+  1047	May 12 21:26:43 archlinux systemd[1]: Queued start job for default target Graphical Interface.
+  1048	May 12 21:26:43 archlinux systemd[1]: Created slice Virtual Machine and Container Slice.
+  1049	May 12 21:26:43 archlinux systemd[1]: Created slice Slice /system/getty.
+  1050	May 12 21:26:43 archlinux systemd[1]: Created slice Slice /system/modprobe.
+  1051	May 12 21:26:43 archlinux systemd[1]: Created slice Slice /system/systemd-fsck.
+  1052	May 12 21:26:43 archlinux systemd[1]: Created slice Slice /system/tmux.
+  1053	May 12 21:26:43 archlinux systemd[1]: Created slice Slice /system/uwsgi.
+  1054	May 12 21:26:43 archlinux systemd[1]: Created slice User and Session Slice.
+  1055	May 12 21:26:43 archlinux systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+  1056	May 12 21:26:43 archlinux systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+  1057	May 12 21:26:43 archlinux systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+  1058	May 12 21:26:43 archlinux systemd[1]: Reached target Local Encrypted Volumes.
+  1059	May 12 21:26:43 archlinux systemd[1]: Reached target Local Integrity Protected Volumes.
+  1060	May 12 21:26:43 archlinux systemd[1]: Reached target Path Units.
+  1061	May 12 21:26:43 archlinux systemd[1]: Reached target Remote File Systems.
+  1062	May 12 21:26:43 archlinux systemd[1]: Reached target Slice Units.
+  1063	May 12 21:26:43 archlinux systemd[1]: Reached target Local Verity Protected Volumes.
+  1064	May 12 21:26:43 archlinux systemd[1]: Listening on Device-mapper event daemon FIFOs.
+  1065	May 12 21:26:43 archlinux systemd[1]: Listening on LVM2 poll daemon socket.
+  1066	May 12 21:26:43 archlinux systemd[1]: Listening on Process Core Dump Socket.
+  1067	May 12 21:26:43 archlinux systemd[1]: Listening on Journal Socket (/dev/log).
+  1068	May 12 21:26:43 archlinux systemd[1]: Listening on Journal Socket.
+  1069	May 12 21:26:43 archlinux systemd[1]: Listening on udev Control Socket.
+  1070	May 12 21:26:43 archlinux systemd[1]: Listening on udev Kernel Socket.
+  1071	May 12 21:26:43 archlinux systemd[1]: Mounting /dev/hugepages...
+  1072	May 12 21:26:43 archlinux systemd[1]: Mounting POSIX Message Queue File System...
+  1073	May 12 21:26:43 archlinux systemd[1]: Mounting Kernel Debug File System...
+  1074	May 12 21:26:43 archlinux systemd[1]: Mounting Kernel Trace File System...
+  1075	May 12 21:26:43 archlinux systemd[1]: Starting Create List of Static Device Nodes...
+  1076	May 12 21:26:43 archlinux systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+  1077	May 12 21:26:43 archlinux systemd[1]: Starting Load Kernel Module configfs...
+  1078	May 12 21:26:43 archlinux systemd[1]: Starting Load Kernel Module dm_mod...
+  1079	May 12 21:26:43 archlinux systemd[1]: Starting Load Kernel Module drm...
+  1080	May 12 21:26:43 archlinux systemd[1]: Starting Load Kernel Module fuse...

@@ -7,15 +7,20 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
-keymap("n", "<C-i>", "<C-i>", opts)
 
 -- Normal --
+-- keymap("n", "<Lwin>", "<Alt>", opts)
 -- Better window navigation
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-l>", "<C-w>l", opts)
-keymap("n", "<m-tab>", "<c-6>", opts)
+-- keymap("n", "<m-u>", "<C-w>h", opts)
+-- keymap("n", "<m-i>", "<C-w>j", opts)
+-- keymap("n", "<m-o>", "<C-w>k", opts)
+-- keymap("n", "<m-p>", "<C-w>l", opts)
+-- keymap("n", "<m-tab>", "<c-6>", opts)
+
+-- keymap("n", "<left>", "<C-w>h", opts)
+-- keymap("n", "<down>", "<C-w>j", opts)
+-- keymap("n", "<up>", "<C-w>k", opts)
+-- keymap("n", "<right>", "<C-w>l", opts)
 
 function _G.set_terminal_keymaps()
   vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
@@ -76,18 +81,18 @@ keymap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 keymap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<tab>",
-  "<cmd>lua require('telescope').extensions.harpoon.marks(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Harpoon'})<cr>",
-  opts
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<s-tab>",
-  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
-  opts
-)
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<tab>",
+--   "<cmd>lua require('telescope').extensions.harpoon.marks(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Harpoon'})<cr>",
+--   opts
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<s-tab>",
+--   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
+--   opts
+-- )
 
 vim.cmd [[
   function! QuickFixToggle()
@@ -100,6 +105,7 @@ vim.cmd [[
 ]]
 
 keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
+
 
 M.show_documentation = function()
   local filetype = vim.bo.filetype

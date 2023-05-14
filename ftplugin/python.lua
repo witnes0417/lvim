@@ -33,7 +33,7 @@ formatters.setup { { name = "black" }, }
 -- lvim.format_on_save.pattern = { "*.py" }
 
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", filetypes = { "python" } } }
+-- linters.setup { { command = "flake8", filetypes = { "python" } } }
 
 local opts = {
   mode = "n", -- NORMAL mode
@@ -68,9 +68,9 @@ require("neotest").setup({
 })
 
 local mappings = {
-  C = {
+  f = {
     name = "Python",
-    c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+    e = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
   },
 }
 

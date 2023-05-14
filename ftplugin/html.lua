@@ -1,6 +1,3 @@
-vim.opt_local.shiftwidth = 2
-vim.opt_local.tabstop = 2
-
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "emmet-ls" })
 
 local lsp_manager = require "lvim.lsp.manager"

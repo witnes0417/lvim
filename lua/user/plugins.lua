@@ -35,6 +35,7 @@ lvim.plugins = {
 	"ggandor/leap.nvim",
 	"nacro90/numb.nvim",
 	"TimUntersberger/neogit",
+  "tpope/vim-fugitive",
 	"sindrets/diffview.nvim",
 	"simrat39/rust-tools.nvim",
 	"olexsmir/gopher.nvim",

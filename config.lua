@@ -31,5 +31,6 @@ reload "user.chatgpt"
 reload "user.whichkey"
 reload "user.neoai"
 reload "user.swenv"
+reload "user.git_worktree"
 -- lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 

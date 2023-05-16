@@ -2,6 +2,7 @@
 lvim.plugins = {
 	"stevearc/dressing.nvim",
 	"AckslD/swenv.nvim",
+  'ThePrimeagen/git-worktree.nvim',
 	"lunarvim/onedarker.nvim",
 	"LunarVim/synthwave84.nvim",
 	"roobert/tailwindcss-colorizer-cmp.nvim",
@@ -41,9 +42,9 @@ lvim.plugins = {
 	"mfussenegger/nvim-dap-python",
 	"jose-elias-alvarez/typescript.nvim",
 	"mxsdev/nvim-dap-vscode-js",
-	"petertriho/nvim-scrollbar",
-	"renerocksai/telekasten.nvim",
+  "petertriho/nvim-scrollbar",
 	-- "renerocksai/calendar-vim",
+   'dccsillag/magma-nvim',
 	{
 		"saecki/crates.nvim",
 		version = "v0.3.0",

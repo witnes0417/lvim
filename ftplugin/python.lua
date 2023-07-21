@@ -75,3 +75,4 @@ local mappings = {
 }
 
 which_key.register(mappings, opts)
+

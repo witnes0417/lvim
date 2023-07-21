@@ -79,11 +79,12 @@ require("lvim.lsp.manager").setup("clangd", opts)
 
 -- DAP setting
 
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/bin/")
 lvim.builtin.dap.on_config_done = function(dap)
 	dap.adapters.cppdbg = {
 		id = "cppdbg",
 		type = "executable",
-		command = "/home/rangol/.local/share/lvim/mason/bin/OpenDebugAD7",
+		command = mason_path .. "OpenDebugAD7",
 	}
 	dap.configurations.cpp = {
 		{

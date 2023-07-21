@@ -24,7 +24,7 @@ local opts = {
 
 local mappings = {
   g = {
-    name = "Python",
+    name = "worktree",
     w = { 
       name = "Worktree",
       c = {"<cmd> lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", "create worktree"},

@@ -1,15 +1,19 @@
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
-lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
+lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require"dapui".close(); require("user.functions").smart_quit()<CR>', "Quit" }
 lvim.builtin.which_key.mappings["w"] = { "<cmd>w<cr>", "save current" }
 -- lvim.builtin.which_key.mappings["wa"] = { "<cmd>wa<cr>", "save all" }
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
 lvim.builtin.which_key.mappings["b"] = {
-  name = "Buffer",
-	f = { "<cmd>Telescope buffers<cr>", "find Buffers/<S-tab>" },
-	p = { "<cmd>echo expand('%:p:h')<cr>", "get file path" },
+ --  name = "Buffer",
+	-- f = { "<cmd>Telescope buffers<cr>", "find Buffers/<S-tab>" },
+	-- p = { "<cmd>echo expand('%:p:h')<cr>", "get file path" },
+  name = "Breakpoint",
+ 	t = { "<cmd>lua require('persistent-breakpoints.api').toggle_breakpoint()<cr>", "toogle breakpoint" },
+	d = { "<cmd>lua require('persistent-breakpoints.api').clear_all_breakpoints()<cr>", "clear all breakpoints" },
+	c = { "<cmd>lua require('persistent-breakpoints.api').set_conditional_breakpoint()<cr>", "set conditional breakpoint" },
 }
 lvim.builtin.which_key.mappings["r"] = {
     name = "Magma Evaluate",
@@ -38,21 +42,24 @@ lvim.builtin.which_key.mappings["a"] = {
 }
 lvim.builtin.which_key.mappings["d"] = {
 	name = "Debug",
-	b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
-	c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-	i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
-	o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
-	O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
+	b = { "<cmd>lua require('persistent-breakpoints.api').toggle_breakpoint()<cr>", "Breakpoint" },
+	a = { "<cmd>lua require('persistent-breakpoints.api').clear_all_breakpoints()<cr>", "clear all breakpoints" },
+	s = { "<cmd>lua require'dap'.step_into()<cr>", "step into" },
+	o = { "<cmd>lua require'dap'.step_out()<cr>", "step out" },
+	n = { "<cmd>lua require'dap'.step_over()<cr>", "step over" },
+	c = { "<cmd>lua require'dap'.continue()<cr>", "continue" },
 	r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
 	l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
-	u = { "<cmd>lua require'dapui'.toggle()<cr>", "reset ui" },
-  U = { "<cmd>lua require'dapui'.setup(); require'dapui'.toggle()<cr>", "UI" },
-	x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
+	u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
+	x = { "<cmd>lua require'dap'.terminate();require'dapui'.close()<cr>", "Exit" },
 }
 lvim.builtin.which_key.mappings["f"] = {
 	name = "Find",
-	-- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
   b = { "<cmd>Telescope buffers<cr>", "find Buffers/<S-tab>" },
+	P = { "<cmd>echo expand('%:p:h')<cr>", "get file path" },
+	p = { "<cmd>Telescope projects<cr>", "get file path" },
+	-- p = { "<cmd>lua require'telescope'.extensions.project.project{}<cr>", "projects" },
+	B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 	f = { "<cmd>Telescope find_files<cr>", "Find files" },
 	t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
@@ -193,23 +200,34 @@ if not status_ok then
 end
 
 local m_mappings = {
-	a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
+  ---------- bookmark.nvim
+	-- c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
+	-- x = { "<cmd>BookmarkClearProject<cr>", "Clear All" },
+	-- m = { "<cmd>silent BookmarkToggle<cr>", "Toggle bookmark" },
+	-- -- a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
+	-- j = { "<cmd>silent BookmarkNext<cr>", "Next" },
+	-- k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
+	-- f = { "<cmd>silent FilemarkToggle<cr>", "Toggle filemark" },
+	-- s = { "<cmd>Telescope bookmark filemarks<cr>", "Search Files" },
+	-- l = { "<cmd>silent BookmarkList<cr>", "Clear" },
+  ----------  bookmark.vim
+	j = { "<cmd>silent BookmarkNext<cr>", "Next" },
+	k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
 	c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
-	b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
-	m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
+	m = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
+  a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
+	h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
 	["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
 	[","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
 	l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
-	j = { "<cmd>silent BookmarkNext<cr>", "Next" },
-	s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
-	k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
-	S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+	S = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
+	s = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+	-- [";"] = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
 	-- s = {
 	--   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
 	--   "Show",
 	-- },
-	x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
-	[";"] = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
+
 }
 
 which_key.register(m_mappings, m_opts)
